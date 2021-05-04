@@ -19,6 +19,7 @@ GoogleSignin.configure({
 
 async function onGoogleButtonPress() {
   try {
+    console.log('hiiiiiii');
     const {idToken} = await GoogleSignin.signIn();
     const googleCredential = auth.GoogleAuthProvider.credential(idToken);
     return auth().signInWithCredential(googleCredential);
